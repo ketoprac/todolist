@@ -121,7 +121,7 @@ form button:hover {
   border-top-left-radius: 0;
 }
 
-.fa-trash,
+.fa-trash-alt,
 .fa-check {
   pointer-events: none;
 }

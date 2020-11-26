@@ -5,9 +5,9 @@
 }
 
 body {
-  background-image: linear-gradient(90deg, #ff9a3c, #ffb13c);
+  background-image: linear-gradient(90deg, #0278ae, #51adcf);
   color: white;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Source Sans Pro", sans-serif;
   min-height: 100vh;
 }
 
@@ -25,14 +25,22 @@ form {
 
 form input,
 form button {
+  border-radius: 5px;
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
   background: white;
 }
 
+form input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
 form button {
-  color: #ff9a3c;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  color: #0278ae;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -40,7 +48,7 @@ form button {
 
 form button:hover {
   color: white;
-  background: #ff9a3c;
+  background: #0278ae;
 }
 
 .todo-container {
@@ -50,7 +58,7 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  min-width: 35%;
   list-style: none;
 }
 
@@ -70,7 +78,7 @@ form button:hover {
 }
 
 .complete-btn {
-  background: #27a31c;
+  background: #40c235;
   color: white;
   border: none;
   padding: 1rem;
@@ -81,7 +89,7 @@ form button:hover {
 
 .complete-btn:hover {
   background: white;
-  color: #27a31c;
+  color: #40c235;
 }
 
 .trash-btn {
@@ -101,6 +109,16 @@ form button:hover {
 
 .todo-item {
   padding: 0rem 0.5rem;
+}
+
+.todo {
+  border-radius: 5px;
+}
+
+.trash-btn {
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .fa-trash,
@@ -130,19 +148,22 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 select {
-  color: #ff9a3c;
+  color: #0278ae;
   width: 10rem;
   cursor: pointer;
   padding: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
 }
 
 .select::after {
   content: "\25BC";
   position: absolute;
-  background: #ff9a3c;
+  background: #0278ae;
   top: 0;
   right: 0;
   padding: 1rem;
@@ -152,5 +173,16 @@ select {
 
 .select:hover::after {
   background: white;
-  color: #ff9a3c;
+  color: #0278ae;
+}
+
+/* Responsiveness */
+@media (min-width: 320px) and (max-width: 640px) {
+  form {
+    flex-wrap: wrap;
+  }
+
+  input {
+    max-width: 40vh;
+  }
 }

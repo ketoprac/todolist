@@ -43,6 +43,7 @@ form button {
   color: #0278ae;
   background: white;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 form button:hover {
